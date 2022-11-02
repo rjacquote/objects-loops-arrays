@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Do while is similar to a while loop but it's guaranteed to execute at least once.</p>
+    <p>First it executes then code, then it checks to the loop condition.</p>
+    <p>Use a do while loop when you want code to run at least once.</p>
+
+    <script>
+        let lighterAttempt = 1;
+        let noSpark = true;
+
+        do{
+            if(lighterAttempt == 7) {
+                console.log('attempted to start the lighter', lighterAttempt);
+                noSpark = false;
+            } else{
+                console.log('attempted to start the light', lighterAttempt++, "Didn't start, try again");
+                
+            }
+        }while (noSpark){
+            console.log(`light started at attempt number ${lighterAttempt}`);
+        }
+    </script>
+</body>
+</html>
