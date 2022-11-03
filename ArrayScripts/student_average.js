@@ -16,7 +16,7 @@ function studentAverageScores(list){
              sum += list[i].scores[x];
         }
         average = (sum/scoresLength).toFixed(2);
-        console.log(`${name} average is: ${average}`);
+        console.log(`${name}'s average is: ${average}`);
     }
 }
 

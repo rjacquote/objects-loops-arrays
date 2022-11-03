@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let menu = [{ id: 1, item: "Tacos", category: "Meal", price: "12.29" },
+        { id: 2, item: "Burger", category: "Meal", price: 7.29 },
+        { id: 3, item: "Salad", category: "Meal", price: 8.29 },
+        { id: 4, item: "Ice Tea", category: "Drink", price: 2.19 },
+        { id: 5, item: "Coke", category: "Drink", price: 2.29 }] // creates an array of food items
+
+        function getMenuItemsInCategory(menu, category){ // defines a function that takes 2 arguments
+            let matching = []; // creates an empty array
+            let numItems = menu.length; // declares a variable that holds the length of the menu array
+            for(let i = 0; i < numItems; i++){ // creates a for loop that loops over the array
+                if (menu[i].category == category){ // if block tests if the item being looped is equal to the category passed as an argument
+                    matching.push(menu[i]);
+                    //console.log(menu[i].item);
+                    console.log(`${menu[i].item} is $${menu[i].price.toFixed(2)}`)
+                }
+            }
+            return matching;
+        }
+
+        // show all the drinks
+        let drinks = getMenuItemsInCategory(menu, "Drink");
+        console.log(drinks);
+        // let numDrinks = drinks.length;
+        // for (let i = 0; numDrinks; i++){
+        //     console.log(`${drinks[i].item} is $${drinks[i].price.toFixed(2)}`);
+        // }
+    </script>
+</body>
+
+</html>

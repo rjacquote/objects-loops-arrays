@@ -7,6 +7,31 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        // searching an array
+        let teams = ["Yankees", "Rangers", "Blue Jays", "Astros", "White Sox", "Rangers"];
+        //team[-1] = "Jays";
+        //let index = team.indexOf("Jays");
+        let index = teams.indexOf("Rangers");
+        let index1 = teams.indexOf("Rangers", 3);
+        let firstIndex = teams.indexOf("Rangers");
+        let lastIndex = teams.lastIndexOf("Rangers");
+        console.log(firstIndex, lastIndex);
+        if(index == -1){
+            console.log('Item not found');
+        } else{
+            console.log(`Item at position: ${index}`);
+        }
+        //console.log(team.length);
+        //console.log(index);
+    </script>
+
+    <!-- <script>
+        // adding items to an array
+        let kids = ["Natalie", "Brittany", "Zachary"];
+        kids[3] = "Brandon";
+        kids[5] = "Jason";
+        console.log(kids);
+    </script> -->
 </body>
 </html>
